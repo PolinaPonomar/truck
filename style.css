@@ -1,0 +1,144 @@
+body, html {margin: 0; padding: 0;}
+
+html {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body {
+    width: 1000px;
+    height: 1000px;
+}
+
+body *, body *::before, body *::after {
+    position: absolute;
+    content: '';
+}
+
+.truck {
+    top: 105px;
+    left: 246px;
+}
+
+/* надстройка с флажком над тележкой */
+
+.truck__top {
+    top: 0px;
+    left: 71px;
+    width: 98px;
+    height: 416px;
+}
+
+/* палка */
+.truck__top::before {
+    top: 0px;
+    left: 63px;
+    width: 5px;
+    height: 320px;
+    background-color: #959595;
+    z-index: 1;
+}
+
+/* флажок */
+.truck__top::after {
+    top: 4px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid transparent;
+    border-right: 64px solid #ff0000;
+    border-bottom: 20px solid transparent;
+}
+
+.truck__rectangle {
+    top: 320px;
+    left: 39px;
+    width: 54px;
+    height: 40px;
+    border-radius: 5px 5px 0 0;
+    background-color: #666666;
+}
+
+.truck__rectangle::after {
+    top: 0px;
+    left: 0px;
+    width: 54px;
+    height: 8px;
+    border-radius: 5px 5px 0 0;
+    background-color: #000000;
+}
+
+.truck__trapeze {
+    top: 360px;
+    left: 0;
+    width: 98px;
+    height: 56px;
+    background: linear-gradient(-70deg, black 80%, transparent 0%);
+}
+
+/* основная часть тележки */
+
+.truck__roof {
+    top: 416px;
+    left: 4px;
+    width: 532px;
+    height: 64px;
+    border-radius: 62px 214px 5px 7px / 47px 54px 5px 7px;
+    background-color: #d9d8d8;
+}
+
+.truck__roof::after {
+    top: 49px;
+    left: -5px;
+    width: 540px;
+    height: 15px;
+    border-radius: 99rem;
+    background-color: red;
+}
+
+.truck__body {
+    top: 480px;
+    left: 9px;
+    width: 520px;
+    height: 130px;
+    border-radius: 0px 0px 26px 26px;
+    background-color: #f45a3b;
+}
+
+.truck__wheels-place {
+    top: 610px;
+    left: 24px;
+    width: 490px;
+    height: 145px;
+    background: linear-gradient(135deg, transparent 14%, #222222 0%) 0px -35px, linear-gradient(-135deg, transparent 14%, #222222 0%) 244px -35px, linear-gradient(45deg, transparent 22%, #222222 0%) 0px 37px, linear-gradient(-45deg, transparent 22%, #222222 0%) 244px 37px;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.truck__wheels {
+    top: 40px;
+    left: 185px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.truck__wheels::before {
+    top: 0px;
+    left: -175px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.truck__wheels::after {
+    top: 0px;
+    left: 175px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: black;
+}
